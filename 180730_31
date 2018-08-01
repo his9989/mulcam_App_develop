@@ -1,0 +1,58 @@
+## 컴퓨터 개론
+  1. 컴퓨터 역사
+  2. 컴퓨터 구조
+  3. 프로그래밍 언어
+  등등 개략적인 도입 설명
+  
+## 앱 인벤터 사용
+  1. 앱 인벤터란, 어플리케이션 개발 tool. block 형식으로 코딩해서 결과물을 볼 수 있는 tool로, 초기 교육에 적합.\
+                 간단한 기술에 비해 결과물이 꽤나 깔쌈하다.
+  2. 실행 방법: (1) 구글에서 "앱 인벤터2" 검색
+               (2) 구글 계정으로 로그인
+               (3) aistarter 설치 (app 애뮬레티어)
+               (4) new project -  design tap에서 먼저 화면 설계하고
+                                  block tap에서 기능 입력
+               (5) aistarter 열어두고, 앱 인벤터2 웹 화면 상단의 tap에서 "애뮬레이터"를 클릭해서 실행.
+                   open된 가상 핸드폰 화면은 굳이 끄지 않아도 코드 수정 내용이 바로 반영된다.
+               
+## java 설치 방법 (수업 중에는 javaStudy 폴더에서 실습하였다.)
+
+1. www.oracle.com 접속
+
+2. Developers - download - java - Java(JDK) for Developers - Java SE 8u181 JDK - windows x64
+	(JRE는 소스코드 사용만 할 때 사용)
+	(안드로이드는 Java 9,10버전은 사용하지 않는다.)
+	(9버전부터는 orlcle 인수합병 영향으로 변화가 큼.)
+	(standard, enterprise 2가지 adtion 이 있다. 안드로이드는 standard를 사용한다.)
+
+3. 설치 프로그램 쭉쭉쭉 next하면 설치 완료
+	(cmd - java 입력해서 설치여부 확인)
+	(C:\Program Files\Java\jdk1.8.0_181 에 설치됨)
+
+4. 윈도우 - 컴퓨터 - 속성 - 고급 시스템 설정 - 환경 변수 - 시스템 변수 "새로 만들기" 
+
+5. 변수이름 설정
+	변수이름: JAVA_HOME
+	변수 값:  Java jdk가 설치되있는 경로 (C:\Program Files\Java\jdk1.8.0_181)
+
+6. 시스템 변수에서 "Path"라는 변수를 찾아라
+	-> 이거 지우면 ㅈ된다. 절대 지우지말고, 맨 앞에 다음 문장 추가
+		%JAVA_HOME%\bin;
+	(cmd에서 javac 입력해서 설치 여부 확인)
+
+++ 개발환경 다운로드 (이클립스)
+1. http://www.eclipse.org 접속
+
+2. 다운로드 클릭
+
+3. Get Eclipse PHOTON 하단의 Download Packages
+
+4. Eclipse IDE for Java Developers 에서 windows 64bits 클릭 - download
+
+5. 설치된 압축 파일을 압축해제 한 뒤, 그 안에 있는 eclipse 폴더를 실습중인 Java 파일이 있는 폴더로 옮긴다.
+	ex. javaStudy 폴더
+	(압축한 workSpace는 수업 실습 내용이 있는 파일)
+
+6. eclipse 폴더 안의 eclipse.exe 실행
+
+7. workspace 폴더 위치를 설정하라는 말이 나올 것임. 실습 내용을 저장할 폴더를 설정하는게 좋을 것.
