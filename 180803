@@ -86,7 +86,7 @@
 	입력: set
 	출력: get
 
-5. api
+5. api : application programming interface
    기본 api
 	java.io : 입출력
 	java.lang : 기본 클래스 제공 (math, thread 등 포함)
