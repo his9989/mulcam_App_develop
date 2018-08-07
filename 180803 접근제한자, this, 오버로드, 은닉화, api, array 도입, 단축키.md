@@ -33,6 +33,7 @@
 </hr>
 
 ## this
+
 * this는 method 안에서 사용할 수 있다.
 * this가 가리키는 것 = method를 갖고 있는 것.
 	- 현재 실행중인 객체의 위치값 	: this
