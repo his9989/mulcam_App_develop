@@ -42,9 +42,44 @@ ex)
       - final method : Override 할 수 없다.를 의미
       - final variable : 상수로 정의. 즉, 변수의 값을 변경할 수 없다.
       
-  * abstract :  메소드 정의만 하고, 구현은 하지 않는 경우에 사용한다.
-  		즉, super class에서 메소드 정의만 해주고, sub class에서 overriding을 통해 메소드 내용을 구현해서 가져다 쓰는것.
-		이름을 공통적으로 사용하는데 사용하는 듯 하다.
+  * abstract :  메소드 정의만 하고, 구현은 하지 않는 경우에 사용한다. <br>
+  		즉, super class에서 메소드 정의만 해주고, sub class에서 overriding을 통해 메소드 내용을 구현해서 가져다 쓰는것. <br>
+		이름을 공통적으로 사용하는데 사용하는 듯 하다. <br>
+		
+		* method 앞에 abstract를 붙여서 추상 메소드를 선언 가능. 추상 메소드를 갖는 클래스는 abstract class 형식의 추상클래서여야한다.
+		
+<code>
+	abstract class Trans {			// 추상 클래스
+		abstract void start();		// 추상 메소드
+		abstract void stop();		// 추상 메소드
+	}
+</code>
+
+**abstract 특징**
+		* 추상 클래스는 객체화 할 수 없다. 즉, 힙 영역에 올라갈 수 없으며, 아래와 같이 사용이 불가능하다.
+		
+<code>
+	class AbstractTest{
+		public static void main(String[] args){
+			Trans t = new Trans();
+		}
+	}
+</code>
+<code>		
+		* 추상 클래스는 super class로서 주로, 틀을 만들 때 사용된다. (interface와 비슷하지만 다르다)
+		* sub class는 추상 클래스의 모든 추상 메소드를 overriding해야 사용 가능하다. (아니면 에러뜬다)
+		
+<code>
+	
+	class Bus extends Trans{
+		@override
+		void start() {System.out.println("start overriding!");}
+		@override
+		void stop() {System.out.println("stop overriding!");}
+	
+</code>
+		* 추상 클래스는 일반 메소드를 가질 수 없다.
+		
 		
   * interface : 상수와 구현되지 않은 메소드로만 구성된다.
   		인터페이스의 모든메서드는 자동으로 컴파일러가 public 제한자를 삽입한다.
@@ -64,10 +99,10 @@ ex)
       }
       
 </code>
-
+<code>
 		-> 위와 같은 경우, 두 개의 THIRD 모두 같은 상수 3이 된다.
 		
- **interface의 특징**
+		**interface의 특징**
 
 		* 객체 생성 불가. (구현되지 않은 메소드를 갖고 있다)
 		* super type으로 사용한다.
