@@ -42,8 +42,30 @@ ex)
       - final method : Override 할 수 없다.를 의미
       - final variable : 상수로 정의. 즉, 변수의 값을 변경할 수 없다.
       
+  * abstract :  메소드 정의만 하고, 구현은 하지 않는 경우에 사용한다.
+  		즉, super class에서 메소드 정의만 해주고, sub class에서 overriding을 통해 메소드 내용을 구현해서 가져다 쓰는것.
+		이름을 공통적으로 사용하는데 사용하는 듯 하다.
+		
+  * interface : 상수와 구현되지 않은 메소드로만 구성된다.
+  		인터페이스의 모든메서드는 자동으로 컴파일러가 public 제한자를 삽입한다.
+		즉, final이나 abstract 해야할 메소드, 클래스, 변수 등이 많은 경우 이를 interface class로 한번에 선언할 수 있는 듯 하다.
+		(수업 내용X, 나 혼자 이해한 내용임.)
+
+	ex)
+	
+<code>
+	
+	interface MyInterface{
+		int THIRD = 3;
+	}
+	
+	public class YourInterface{
+		final int THIRD = 3;
+      }
       
-## 조퇴. interface 내용 못 들었다.
+</code>
+
+		-> 위와 같은 경우, 두 개의 THIRD 모두 같은 상수 3이 된다.
 
 
 ------
