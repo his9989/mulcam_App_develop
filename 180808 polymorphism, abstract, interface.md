@@ -31,11 +31,12 @@ ex)
 </code>
 
   * block : {}만을 이용해서 코드를 구현한 것. static과 Instance로 나뉜다.
-      - static Block : 객체가 로딩될 때 실행 <br>
+      - static Block : 객체가 로딩될 때 실행. main보다도 먼저 실행된다. <br>
                        즉, 객체가 2개 이상 있어도 1번만 실행된다. <br>
                           -> 데이터베이스 connection, 라이브러리 로딩 등에 대한 코드에 사용 가능
                           
-      - instance Block : 생성자가 호출되기 전에 실행. 생성자가 없으면 실행되지 않느다.
+      - instance Block : 객체를 만들 때 생성자보다 먼저 실행된다. <br>
+      			 생성자가 호출되기 전에 실행. 생성자가 없으면 실행되지 않느다.
 
   * final : 마지막을 의미한다. 메소드/클래스/변수 앞에 붙을 수 있으며, 이들이 변경될 수 없도록 한다.
       - final class : 상속받을 수 없다.를 의미
@@ -49,6 +50,7 @@ ex)
       
 ## abstract
 
+  * method, class에 붙을 수 있다.
   * 메소드 정의만 하고, 구현은 하지 않는 경우에 사용한다.
   * 즉, super class에서 메소드 정의만 해주고, sub class에서 overriding을 통해 메소드 내용을 구현해서 가져다 쓰는것. 
   * 이름을 공통적으로 사용하는데 사용하는 듯 하다. 
@@ -97,10 +99,9 @@ ex)
 		
 ## interface
 
-  * 상수와 구현되지 않은 메소드로만 구성된다.
-  * 인터페이스의 모든메서드는 자동으로 컴파일러가 public 제한자를 삽입한다.
-  * 즉, final이나 abstract 해야할 메소드, 클래스, 변수 등이 많은 경우 이를 interface class로 한번에 선언할 수 있는 듯 하다.
-  * (수업 내용X, 나 혼자 이해한 내용임.)
+  * 상수와 구현되지 않은 추상 메소드로만 구성된다.
+  * 변수를 가질 수 없다. (자동으로 상수화된다.)
+  * 인터페이스의 모든 메서드는 자동으로 컴파일러가 public static final 제한자를 삽입한다.
 
 	ex)
 	
@@ -133,7 +134,7 @@ ex)
   
   7. interface는 다중 상속이 가능하다. ( implements interface1, interface2 )
   
-  8. upcasting가 가능핟.
+  8. upcasting이 가능핟.
 
 
 ## abstract와 interface의 차이점
