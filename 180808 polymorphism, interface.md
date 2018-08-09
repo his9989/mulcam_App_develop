@@ -66,3 +66,14 @@ ex)
 </code>
 
 		-> 위와 같은 경우, 두 개의 THIRD 모두 같은 상수 3이 된다.
+		
+ **interface의 특징**
+
+		* 객체 생성 불가. (구현되지 않은 메소드를 갖고 있다)
+		* super type으로 사용한다.
+		* interface 내에 변수를 넣으면 상수가 되고, 메소드를 넣으면 추상메소드가 된다.
+		* sub class가 모든 메소드를 구현해야하며, interface는 영수증 같은 역할을 한다. (sub class가 이거이걸 했어~)
+		* Polymorphism 효과를 보인다.
+		* interface를 상속할 때는 extends 대신에 implements를 사용한다.
+		* interface는 다중 상속이 가능하다. ( implements interface1, interface2 )
+		* upcasting가 가능핟.
