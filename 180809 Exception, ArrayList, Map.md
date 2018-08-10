@@ -228,6 +228,9 @@
 		} catch(NullPointerException e) {
 			// 예외2 발생 시 복구 코드
 			System.out.println("NullPointerException");
+		} catch(Exception e){
+			// 앞의 예외처리에서 걸리지 않은 그외 모든 에러의 경우
+			System.out.println("생각치 못한 에러가 발생했어요!");
 		} finally {
 			System.out.println("프로그램 종료!");
 		}
@@ -249,8 +252,10 @@
 	
 	public void sayNick(String nick) throws FoolException {
 		if ("fool".equals(nick)){
+			System.out.println("밑의 출력문까지 못가. 여기서 에러 발생~");
 			throw new FoolException();
 		}
+		System.out.println("위의 if문은 통과했지만, 그래도 FoolException은 던져줄께");
 	}
 	
 	public static void main(String[] args) {
