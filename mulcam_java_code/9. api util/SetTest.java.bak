@@ -1,0 +1,24 @@
+package my.util;
+import java.util.*;
+
+class SetTest 
+{
+	public static void main(String[] args) 
+	{
+		Collection list=new HashSet();
+		list.add("seoul");
+		list.add("korea");
+		list.add("123");
+		list.add("korea");
+		///
+
+		//사용
+		Iterator i=list.iterator();
+		while( i.hasNext()){
+			   Object ob=i.next();
+			   //처리
+			   System.out.println(ob);//ob.toString()
+		}
+
+	}
+}
