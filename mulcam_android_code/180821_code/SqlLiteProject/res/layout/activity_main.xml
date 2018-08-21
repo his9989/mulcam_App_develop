@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20pt"
+        android:text="SqlLiteProject" />
+
+    <Button
+        android:id="@+id/db"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="createDB"
+        android:text="Create Database" />
+
+    <Button
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="createTable"
+        android:text="create table" />
+
+    <Button
+        android:id="@+id/insert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="insertData"
+        android:text="insert data" />
+
+    <Button
+        android:id="@+id/select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="selectData"
+        android:text="select data" />
+
+    <TextView
+        android:id="@+id/result"
+        android:textAlignment="center"
+        android:textSize="10pt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
