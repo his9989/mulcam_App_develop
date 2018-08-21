@@ -41,8 +41,8 @@
   * Table : 데이터를 저장하는 박스
   * query : DB안에서 사용하는 언어.
     + DB 먼저 만들고, Table 만들고, query 이용해서 데이터 넣고, 확인
-  * DDL : Definition (table 만들고)
-  * DML : Manipulation (데이터 넣고)
+  * DDL : Data Definition Language. 자동으로 Commit까지 된다. 취소가 안된다.
+  * DML : Data Manipulation Language. 데이터 조작 언어. Commit, RollBack 해줘야한다. 
   * DCL : control
   
 2. 오라클 : 관계형 DB
@@ -52,7 +52,7 @@
     + 워크시트에서 저장하면, .sql 파일로 저장할 수 있게 된다.
     + 실행할 때 는 "Ctrl + Enter"
  
-3. 명령어
+3. Read 명령어
   * SELECT Table이름 FROM DB이름;
     + DB의 모든 데이터를 출력하는데, Table이름에 해당하는 Table만 출력해라.
     + (ex. SELECT 이름, 학번, 성적 FROM 전교생성적표; 의 경우, 전교생 성적표에서 모든 학생의 이름, 학번, 성적을 출력한다)
@@ -75,4 +75,38 @@
     + Round(AVG(Table3),2)의 경우, 소숫점 아래 2재짜리까지 표시된다.
     + 별칭을 이용하면 보기 편하다. (SELECT Count(Table) 갯수, MAX(Table1) 최곳값, MIN(Table2) 최솟값, AVG(Table3) 평균값 FROM EMP;)
     
+4. Create, Insert 등 그 외명령어
+  * CREATE TABLE CUSTOMER (NUM INTEGER PRIMARY KEY, NAME VARCHAR2(10) NOT NULL, ADDRESS VARCHAR2(10));
+    + Table 만드는 명령어
+    
+  * INSERT Into CUSTOMER (num, NAME) Values (300, 'TOM');
+    + 빠지는 데이터가 있는 경우, 무슨 데이터가 빠지고 들어갈지 말해줘야한다. 
+    + 위의 경우에는 num이 primary key, name은 not null이므로, address만 사라질 수 있다.
+    
+  * Commit
+    + 저장. (주기적으로 Commit 해주는게 좋다)
+    
+  * RollBack
+    + Commit 되지 않은 작업을 지운다. 되돌리기와 같은 개념
+    + 코딩 중 잠깐 실수한 경우, Ctrl+Z 같은 개념. (삭제와 다르다!!!)
+    
+  * Delete CUSTOMER;
+    + 문자그대로, 삭제
+    + Delete CUSTOMER WHERE NUM=100; 물론, 이렇게 조건도 줄 수 있다.
+    
+  * Update Customer set Address = 'Singapore', name='Harry' where NUM=100;
+    + set 뒤에, 수정할 내용을 적는다.
+    + set 뒤에, 수정 내용이 여러가지가 될 수 있다.
+    + delete와 마찬가지로 where 조건문을 꼭 사용한다.
+    
+## 어플리케이션에서 sql 사용하기
+1. SQLiteDatabase db;
+  * SQLiteDatabse 타입의 객체, Insert, Select, Delete 등 DB에서 하는 메소드 사용
 
+2. db = openOrCreateDatabase("member.db", Context.MODE_PRIVATE, null);
+  * member.db라는 이름의 DB 생성
+  * 기존에 파일 이름이 있는 경우 open하고, 없으면 Create하는 명령어
+    
+3.     
+    
+    
