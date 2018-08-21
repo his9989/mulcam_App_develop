@@ -1,3 +1,8 @@
+## oracle database 설치방법
+1. 첨부한 exe 설치 프로그램 실행
+2. 데이터베이스 암호 지정에서 암호 입력하기
+3. 
+
 ## 단축키, 용어 등
 1. handler : main Thread의 것
 2. Thread의 메소드
