@@ -103,10 +103,10 @@
  
 <code>
 
-  package edu.jaen.java.io;
-  import java.io.*;
-  class FileRead {
-     public static void main(String arg[]) throws Exception{
+    package edu.jaen.java.io;
+    import java.io.*;
+    class FileRead {
+       public static void main(String arg[]) throws Exception{
          File f=new File("Data.txt");
          FileReader fr = new FileReader(f);
 
