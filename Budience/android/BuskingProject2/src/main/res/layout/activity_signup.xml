@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView"
+    style="@android:style/Widget.ScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.kimsm.buskingproject.SignupActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/First_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/First_Text"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="ID     "
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/new_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/SecondBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Second_Text"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="비밀번호"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/new_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Third_Bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/Third_Text"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="비번확인"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/pass_check"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Forth_Bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/Forth_Text"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="이름"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Fifth_Bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/Fifth_Text"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="닉네임"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/nickname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="email"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="전화번호"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="선호 장르"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/genre"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/genrep"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:onClick="addm"
+                    android:text="+"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/genrem"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:onClick="addm"
+                    android:text="-"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id = "@+id/ge1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/genre1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id = "@+id/ge2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/genre2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:text="자주가는 장소"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spot"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/spotp"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:onClick="addm"
+                    android:text="+"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/spotm"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:onClick="addm"
+                    android:text="-"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id = "@+id/sp1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spot1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id = "@+id/sp2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spot2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/signup_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="approve"
+            android:text="확인" />
+    </LinearLayout>
+</LinearLayout>
